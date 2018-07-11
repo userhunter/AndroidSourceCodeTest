@@ -1,7 +1,7 @@
 package com.example.test;
 
 import com.example.myweixin.R;
-import com.pacewer.custome.view.CircleMaskImage;
+import com.keep.custome.view.CircleMaskImage;
 
 import android.app.Activity;
 import android.graphics.BitmapFactory;

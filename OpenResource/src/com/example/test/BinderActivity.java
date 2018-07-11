@@ -11,12 +11,12 @@ import android.os.RemoteException;
 import android.util.Log;
 
 import com.example.myweixin.R;
-import com.pacewear.binder.data.Book;
-import com.pacewear.binder.server.BookManager;
-import com.pacewear.binder.server.RemoteBInderService;
-import com.pacewear.binder.server.Stub;
-import com.pacewear.binder.service.aidl.IMyAidlInterface;
-import com.pacewear.binder.service.aidl.RemoteService;
+import com.keep.binder.data.Book;
+import com.keep.binder.server.BookManager;
+import com.keep.binder.server.RemoteBInderService;
+import com.keep.binder.server.Stub;
+import com.keep.binder.service.aidl.IMyAidlInterface;
+import com.keep.binder.service.aidl.RemoteService;
 
 public class BinderActivity extends Activity{
 

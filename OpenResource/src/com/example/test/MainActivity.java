@@ -34,16 +34,16 @@ import android.widget.LinearLayout;
 import android.widget.TabHost;
 
 import com.example.myweixin.R;
-import com.pacewear.binder.service.aidl.IMyAidlInterface;
-import com.pacewear.binder.service.aidl.IMyAidlInterface.Stub;
-import com.pacewear.binder.service.aidl.LocalService;
-import com.pacewear.binder.service.aidl.LocalService.LocalBinderService;
-import com.pacewear.binder.service.aidl.RemoteService;
-import com.pacewear.glide.test.GlideActivity;
-import com.pacewear.glide.test.OkHttpActivity;
-import com.pacewear.handler.test.HanlderActivity;
-import com.pacewear.tws.sharepreference.SharePreferenceUtils;
-import com.pacewear.ui.provider.SportTypeSelectProvider;
+import com.keep.binder.server.Stub;
+import com.keep.binder.service.aidl.IMyAidlInterface;
+import com.keep.binder.service.aidl.LocalService;
+import com.keep.binder.service.aidl.LocalService.LocalBinderService;
+import com.keep.binder.service.aidl.RemoteService;
+import com.keep.glide.test.GlideActivity;
+import com.keep.glide.test.OkHttpActivity;
+import com.keep.handler.test.HanlderActivity;
+import com.keep.tws.sharepreference.SharePreferenceUtils;
+import com.keep.ui.provider.SportTypeSelectProvider;
 
 public class MainActivity extends Activity implements OnTouchListener,OnClickListener{
 	
@@ -288,7 +288,7 @@ public class MainActivity extends Activity implements OnTouchListener,OnClickLis
 		@Override
 		public void onServiceConnected(ComponentName name, IBinder service) {
 			Log.d(TAG, "onServiceConnected remote service:");
-			IMyAidlInterface data = Stub.asInterface(service);
+			IMyAidlInterface data = (IMyAidlInterface) Stub.asInterface(service);
 			try {
 				data.add(5, 6);
 			} catch (RemoteException e) {

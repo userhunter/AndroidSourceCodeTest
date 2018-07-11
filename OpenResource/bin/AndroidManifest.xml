@@ -25,44 +25,44 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="com.pacewear.glide.test.GlideActivity"></activity>
-        <activity android:name="com.pacewear.glide.test.OkHttpActivity"></activity>
+        <activity android:name="com.keep.glide.test.GlideActivity"></activity>
+        <activity android:name="com.keep.glide.test.OkHttpActivity"></activity>
         <activity android:name="com.example.test.BinderActivity"></activity>
         <activity android:name="com.example.test.CustomeActivity"></activity>
         <activity android:name="com.example.test.AnimationActivity"></activity>
         <activity android:name="com.example.test.WebViewActivity"></activity>
         
         <activity android:name="com.example.test.ActivityTransfer"></activity>
-        <activity android:name="com.pacewear.handler.test.HanlderActivity"></activity>
+        <activity android:name="com.keep.handler.test.HanlderActivity"></activity>
         
         
-        <service android:name="com.pacewear.binder.server.RemoteBInderService"
+        <service android:name="com.keep.binder.server.RemoteBInderService"
             android:enabled="true"  
             android:exported="true"  
             android:process=":remote">
             <intent-filter>  
-                <action android:name="com.pacewear.binder.server.RemoteBInderService" />  
+                <action android:name="com.keep.binder.server.RemoteBInderService" />  
                 <category android:name="android.intent.category.DEFAULT" />  
             </intent-filter>  
         </service>
         
-        <service android:name="com.pacewear.binder.service.aidl.LocalService"/>
+        <service android:name="com.keep.binder.service.aidl.LocalService"/>
         
-        <service android:name="com.pacewear.binder.service.aidl.RemoteService"
+        <service android:name="com.keep.binder.service.aidl.RemoteService"
             android:enabled="true"  
             android:exported="true"  
             android:process=":remote">
             <intent-filter>  
-                <action android:name="com.pacewear.binder.service.RemoteService" />  
+                <action android:name="com.keep.binder.service.RemoteService" />  
                 <category android:name="android.intent.category.DEFAULT" />  
             </intent-filter>  
         </service>
         
         <provider
-            android:name="com.pacewear.ui.provider.SportTypeSelectProvider"
-            android:authorities="com.pacewear.tws.sport.typeselect"
+            android:name="com.keep.ui.provider.SportTypeSelectProvider"
+            android:authorities="com.keep.tws.sport.typeselect"
             android:exported="true"
-            android:readPermission="com.pacewear.tws.sport.typeselect.READ" />
+            android:readPermission="com.keep.tws.sport.typeselect.READ" />
         
     </application>
 
