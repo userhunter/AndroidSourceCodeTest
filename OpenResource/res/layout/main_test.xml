@@ -51,7 +51,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="use_aidl_create_service"/>
+        android:text="aidl_service"/>
+    
+     <Button
+        android:id="@+id/intent_servie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="intent_servie"/>
     
     </LinearLayout>
     

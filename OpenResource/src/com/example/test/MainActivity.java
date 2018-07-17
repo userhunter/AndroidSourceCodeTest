@@ -14,6 +14,7 @@ import org.apache.http.util.EntityUtils;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.IntentService;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -44,6 +45,7 @@ import com.keep.glide.test.OkHttpActivity;
 import com.keep.handler.test.HanlderActivity;
 import com.keep.tws.sharepreference.SharePreferenceUtils;
 import com.keep.ui.provider.SportTypeSelectProvider;
+import com.keep.user.intentservice.UserIntentService;
 
 public class MainActivity extends Activity implements OnTouchListener,OnClickListener{
 	
@@ -186,6 +188,11 @@ public class MainActivity extends Activity implements OnTouchListener,OnClickLis
           
           Button handlerButton = (Button)findViewById(R.id.handler_test);
           handlerButton.setOnClickListener(this);
+          
+          Button intentService = (Button)findViewById(R.id.intent_servie);
+          intentService.setOnClickListener(this);
+          
+          
 
 //          mLayout.setOnTouchListener(this);
 //          mButton.setOnTouchListener(this);
@@ -240,10 +247,20 @@ public class MainActivity extends Activity implements OnTouchListener,OnClickLis
 			startAssignActivity(HanlderActivity.class);
 			break;
 			
+		case R.id.intent_servie:
+			startIntentService();
+			break;
+			
 			
 		default:
 			break;
 		}
+	}
+	
+	private void startIntentService(){
+		Intent intent = new Intent();
+		intent.setAction(UserIntentService.INTENT_CONTENT);
+		startService(intent);
 	}
 	
 	private  void bindRemoteService(){

@@ -47,6 +47,11 @@
         </service>
         
         <service android:name="com.keep.binder.service.aidl.LocalService"/>
+        <service android:name="com.keep.user.intentservice.UserIntentService">
+            <intent-filter >
+                <action android:name="com.keep.user.intent" />  
+            </intent-filter>
+        </service>
         
         <service android:name="com.keep.binder.service.aidl.RemoteService"
             android:enabled="true"  
