@@ -192,6 +192,9 @@ public class MainActivity extends Activity implements OnTouchListener,OnClickLis
           Button intentService = (Button)findViewById(R.id.intent_servie);
           intentService.setOnClickListener(this);
           
+          Button swip_fresh = (Button)findViewById(R.id.fresh_swip);
+          swip_fresh.setOnClickListener(this);
+          
           
 
 //          mLayout.setOnTouchListener(this);
@@ -249,6 +252,10 @@ public class MainActivity extends Activity implements OnTouchListener,OnClickLis
 			
 		case R.id.intent_servie:
 			startIntentService();
+			break;
+			
+		case R.id.fresh_swip:
+			startAssignActivity(SwipFreshActivity.class);
 			break;
 			
 			

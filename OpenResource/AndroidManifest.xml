@@ -34,6 +34,7 @@
         
         <activity android:name="com.example.test.ActivityTransfer"></activity>
         <activity android:name="com.keep.handler.test.HanlderActivity"></activity>
+        <activity android:name="com.example.test.SwipFreshActivity"/>
         
         
         <service android:name="com.keep.binder.server.RemoteBInderService"
